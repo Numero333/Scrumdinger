@@ -61,8 +61,6 @@
 		F757BD3E2795AE7C002D682A = {
 			isa = PBXGroup;
 			children = (
-				F7788CBC279EE614007F9EA4 /* MeetingFooterView.swift */,
-				F7788CB6279ED93C007F9EA4 /* MeetingHeaderView.swift */,
 				F757BD492795AE7C002D682A /* Scrumdinger */,
 				F757BD482795AE7C002D682A /* Products */,
 			);
@@ -87,6 +85,8 @@
 				F72EC276279B3F9500718143 /* ThemeView.swift */,
 				F72EC27C279B411B00718143 /* ThemePicker.swift */,
 				F7788CB8279EDC9B007F9EA4 /* ScrumProgressViewStyle.swift */,
+				F7788CBC279EE614007F9EA4 /* MeetingFooterView.swift */,
+				F7788CB6279ED93C007F9EA4 /* MeetingHeaderView.swift */,
 				F757BD4E2795AE7D002D682A /* Assets.xcassets */,
 				F757BD502795AE7D002D682A /* Preview Content */,
 			);
