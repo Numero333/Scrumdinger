@@ -12,18 +12,18 @@ struct DetailEditView: View {
     @State private var newAttendeeName = ""
     
     var body: some View {
+        
         Form {
-            
             Section(header: Text("Meeting Info")) {
                 TextField("Title", text: $data.title)
                 
                 HStack {
-                    Slider(value: $data.lenghtInMinutes, in: 1...30, step: 1) {
+                    Slider(value: $data.lengthInMinutes, in: 1...30, step: 1) {
                     Text("Length")
                     }
-                    .accessibilityValue("\(Int(data.lenghtInMinutes)) minutes")
+                    .accessibilityValue("\(Int(data.lengthInMinutes)) minutes")
                     Spacer()
-                    Text("\(Int(data.lenghtInMinutes)) minutes")
+                    Text("\(Int(data.lengthInMinutes)) minutes")
                         .accessibilityHidden(true)
                 }
                 ThemePicker(selection: $data.theme)
