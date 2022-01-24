@@ -11,10 +11,10 @@ import AVFoundation
 struct MeetingView: View {
     @Binding var scrum: DailyScrum
     @StateObject var scrumTimer = ScrumTimer()
+    
+    private var player: AVPlayer { AVPlayer.sharedDingPlayer}
+    
     var body: some View {
-        
-        
-        
         ZStack {
             RoundedRectangle(cornerRadius: 16)
                 .fill(scrum.theme.mainColor)
@@ -30,6 +30,10 @@ struct MeetingView: View {
         .foregroundColor(scrum.theme.accentColor)
         .onAppear {
             scrumTimer.reset(lengthInMinutes: scrum.lenghInMinutes, attendees: scrum.attendees)
+            scrumTimer.speakerChangedAction = {
+                player.seek(to: .zero)
+                player.play()
+            }
             scrumTimer.startScrum()
         }
         .onDisappear {

@@ -29,8 +29,9 @@ struct MeetingFooterView: View {
         VStack {
             HStack {
                 if isLastSpeaker {
-                    Text(speakerText)
+                    Text("Last Speaker")
                 } else {
+                    Text(speakerText)
                     Spacer()
                     Button(action: skipAction) {
                         Image(systemName: "forward.fill")
